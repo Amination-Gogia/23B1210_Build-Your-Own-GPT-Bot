@@ -9,7 +9,7 @@ from flask import Flask, request, render_template
 import os
 import markdown
 API_KEY=os.getenv("GEMINI_API_KEY")
-client = genai.Client(api_key = API_KEY)
+client = genai.Client(api_key=API_KEY)
 model = "gemini-2.5-flash"
 app = Flask(__name__, template_folder = '.')
 

@@ -1,5 +1,3 @@
----
-
 ## 🔧 Windows Development Environment Setup
 
 1. **Create a `.env` File**
@@ -41,6 +39,7 @@
    - Purpose: Allows script execution in the current session without changing global settings.
 
 5. **Add `.env` to `.gitignore`**
+
    - Commands:
      ```
      New-Item -Path . -Name ".gitignore" -ItemType "File" -Force
@@ -48,5 +47,4 @@
      ```
    - Purpose: Prevents the `.env` file from being tracked by Git, ensuring sensitive information is not exposed.
 
-6. ```$envFile = Get-Content -Path .\.env ```
----
+6. `$envFile = Get-Content -Path .\.env `

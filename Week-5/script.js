@@ -1,7 +1,7 @@
 const msgs = document.getElementById("msgs");
 const input = document.getElementById("q");
 const send = document.getElementById("send");
-converter = new showdown.Converter();
+// converter = new showdown.Converter();
 send.addEventListener("click", askBot);
 input.addEventListener("keydown", (e) => {
   if (e.key === "Enter") askBot();
@@ -22,8 +22,8 @@ async function askBot() {
       body: JSON.stringify({ query: text }),
     });
     const { answer } = await res.json();
-    const html = converter.makeHtml(answer);
-    append("bot", html, true);
+    // const html = converter.makeHtml(answer);
+    append("bot", answer);
   } catch (err) {
     append("bot", "❌ Error: Could not contact server.");
     console.error(err);

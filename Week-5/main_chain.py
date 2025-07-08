@@ -15,7 +15,7 @@ load_dotenv()
 sent_trans = SentenceTransformer('Sent_Transformer_Mod')
 embedder = LocalEmbeddings('From_Local_Trans', from_local=True, emb_mod=sent_trans)
 print('loading....')
-vs = FAISS.load_local('ugac_rb', embedder, allow_dangerous_deserialization=True)
+vs = FAISS.load_local('new_ug_book', embedder, allow_dangerous_deserialization=True)
 print('Vector Store is up')
 retriever = vs.as_retriever(type = 'similarity', search_kwargs = {'k': 4})
 
